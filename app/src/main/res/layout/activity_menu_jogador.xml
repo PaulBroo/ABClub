@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    tools:context=".MenuJogador">
+
+    <ImageButton
+        android:id="@+id/OpenPerfil"
+        android:layout_width="111dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/marcinhos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#226DA8"
+        android:text="Logout"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:iconTint="#881616" />
+
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="760dp"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/BtnTreinos"
+            android:layout_width="270dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#EAD311"
+            android:text="Informações sobre Treinos"
+            android:textColor="#000000" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/BtnAvisos"
+            android:layout_width="270dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#EAD311"
+            android:text="Avisos"
+            android:textColor="#000000" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/BtnJogos"
+            android:layout_width="270dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#EAD311"
+            android:text="Informações sobre os jogos"
+            android:textColor="#000000" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/BtnFaltas"
+            android:layout_width="270dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#EAD311"
+            android:text="Registo de Faltas"
+            android:textColor="#000000" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/BtnQuotas"
+            android:layout_width="270dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#EAD311"
+            android:text="Pagamento de quotas"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

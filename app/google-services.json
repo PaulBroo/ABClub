@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "8920079492",
+    "project_id": "abclub-30a87",
+    "storage_bucket": "abclub-30a87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8920079492:android:e816aef5cc28e740fcf6d1",
+        "android_client_info": {
+          "package_name": "com.example.uiteste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8920079492-59pvjagorui6m9ma0bkjjmqngfd0isl2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0HXBx1tKvyAyHtz7UT6GLyj4YvwOAvCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8920079492-59pvjagorui6m9ma0bkjjmqngfd0isl2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
