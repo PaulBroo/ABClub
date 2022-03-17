@@ -10,10 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".avisos.MenuAvisosTreinador"
+            android:exported="false" />
+        <activity
+            android:name=".avisos.MenuAvisosEncarregado_Atleta"
+            android:exported="false" />
+        <activity
+            android:name=".avisos.EliminarAvisos"
+            android:exported="false" />
+        <activity
+            android:name=".avisos.EditarAvisos"
+            android:exported="false" />
+        <activity
             android:name=".TreinosTreinador"
             android:exported="false" />
         <activity
             android:name=".Faltas"
+            android:exported="false" />
+        <activity
+            android:name=".calendario.WeekViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".calendario.EventEditActivity"
             android:exported="false" />
         <activity
             android:name=".MenuTreinador"

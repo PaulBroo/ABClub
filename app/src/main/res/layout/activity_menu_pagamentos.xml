@@ -6,10 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MenuPagamentos">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip4"
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="288dp"
+        android:layout_height="55dp"
+        android:text="MBWAY"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="176dp"
+        android:layout_height="26dp"
+        android:text="Quotas em falta:"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="160dp" />
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="133dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,11 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.uiteste.avisos.MenuAvisosTreinador;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MenuTreinador extends AppCompatActivity {
 
-    private Button Logout;
+    private Button Logout, Avisos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +28,18 @@ public class MenuTreinador extends AppCompatActivity {
                 finish();
             }
         });
+
+        Avisos = (Button) findViewById(R.id.btnAvisos);
+        Avisos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MenuAvisosTreinador.class));
+                finish();
+            }
+        });
+    }
+
+    public void AbrirTreinos(View view) {
+            startActivity(new Intent(getApplicationContext(), TreinosTreinador.class));
     }
 }

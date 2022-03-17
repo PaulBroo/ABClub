@@ -55,6 +55,7 @@
 
         <Button
             android:id="@+id/btnTreinosTreinador"
+            android:onClick="AbrirTreinos"
             android:layout_width="270dp"
             android:layout_height="57dp"
             android:layout_gravity="center_horizontal"
