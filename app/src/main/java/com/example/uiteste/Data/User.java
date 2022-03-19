@@ -2,17 +2,18 @@ package com.example.uiteste.Data;
 
 public class User {
 
-    String Primeiro_Nome, Ultimo_Nome, escalao, role, email;
+    String Primeiro_Nome, Ultimo_Nome, escalao, equipa, role, email;
     int dia, mes, ano;
 
     public User() {
 
     }
 
-    public User(String pnome, String unome, String escalao, String role, String email, int dia, int mes, int ano) {
+    public User(String pnome, String unome, String escalao, String equipa, String role, String email, int dia, int mes, int ano) {
         Primeiro_Nome = pnome;
         Ultimo_Nome = unome;
         this.escalao = escalao;
+        this.equipa = equipa;
         this.role = role;
         this.email = email;
         this.dia = dia;
@@ -51,6 +52,10 @@ public class User {
     public void setEscalao(String escalao) {
         this.escalao = escalao;
     }
+
+    public String getEquipa() { return equipa; }
+
+    public void setEquipa(String equipa) { this.equipa = equipa; }
 
     public String getRole() {
         return role;

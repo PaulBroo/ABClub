@@ -29,15 +29,14 @@ public class CriarUtilizador extends AppCompatActivity implements DatePickerDial
 
     private TextView showData;
     private EditText FirstName, LastName, Password, Email;
-    private Spinner EscalaoSpinner, RoleSpinner;
-    private Button criar;
+    private Spinner EscalaoSpinner, RoleSpinner, EquipaSpinner;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private FirebaseAuth fAuth;
     private int anoNasc, mesNasc, diaNasc;
-    private String escalao, role;
+    private String escalao, role, equipa;
 
     FirebaseDatabase rootNode;
-    DatabaseReference reference;
+    DatabaseReference UsersReference, TeamReference;
 
 
     @Override
@@ -90,6 +89,24 @@ public class CriarUtilizador extends AppCompatActivity implements DatePickerDial
             }
         });
 
+        //Para o spinner de Equipas
+        EquipaSpinner = findViewById(R.id.EquipasLista);
+        ArrayAdapter<CharSequence> adapterEquipas = ArrayAdapter.createFromResource
+                (this, R.array.equipas, android.R.layout.simple_spinner_item);
+        adapterEquipas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        EquipaSpinner.setAdapter(adapterEquipas);
+        EquipaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                equipa = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         //Para o botão criar
         findViewById(R.id.BtnConcluir).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,8 +135,6 @@ public class CriarUtilizador extends AppCompatActivity implements DatePickerDial
     }
 
 
-
-
     public void ConcluirCriacao() {
         FirstName = findViewById(R.id.PrimeiroNome);
         LastName = findViewById(R.id.UltimoNome);
@@ -133,14 +148,20 @@ public class CriarUtilizador extends AppCompatActivity implements DatePickerDial
 
         fAuth = FirebaseAuth.getInstance();
         rootNode = FirebaseDatabase.getInstance("https://abclub-30a87-default-rtdb.europe-west1.firebasedatabase.app");
-        reference = rootNode.getReference("Users");
-        User helperclass = new User(PrimeiroNome, UltimoNome, escalao, role,email , diaNasc, mesNasc, anoNasc);
+        UsersReference = rootNode.getReference("Users");
+        TeamReference = rootNode.getReference("Equipas").child(escalao).child(equipa);
+
+        User helperclass = new User(PrimeiroNome, UltimoNome, escalao, equipa, role, email , diaNasc, mesNasc, anoNasc);
 
         fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    reference.child(task.getResult().getUser().getUid()).setValue(helperclass);
+                    UsersReference.child(task.getResult().getUser().getUid()).setValue(helperclass);
+
+                    if (role.equals("jogador")) {
+                        TeamReference.child(task.getResult().getUser().getUid()).setValue(helperclass);
+                    }
                     Toast.makeText(CriarUtilizador.this, "Utilizador Criado!", Toast.LENGTH_SHORT).show();
                 }
                 else {

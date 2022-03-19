@@ -31,7 +31,7 @@
             android:name=".calendario.WeekViewActivity"
             android:exported="false" />
         <activity
-            android:name=".calendario.EventEditActivity"
+            android:name=".calendario.EditarEvento"
             android:exported="false" />
         <activity
             android:name=".MenuTreinador"

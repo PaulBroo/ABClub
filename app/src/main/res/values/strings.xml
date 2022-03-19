@@ -12,6 +12,12 @@
         <item>jogador</item>
         <item>treinador</item>
     </string-array>
+    <string-array name="equipas">
+        <item>Equipa 1</item>
+        <item>Equipa 2</item>
+        <item>Equipa 3</item>
+        <item>Equipa 4</item>
+    </string-array>
     <string name="title_activity_settings">SettingsActivity</string>
 
     <!-- Preference Titles -->

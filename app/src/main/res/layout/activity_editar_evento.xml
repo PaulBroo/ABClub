@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.uiteste.calendario.EditarEvento">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Escalao"
+        android:textColor="@color/orange"
+        android:textSize="35sp" />
+
+    <Spinner
+        android:id="@+id/EscolhaEscalao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="55dp"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Equipa"
+        android:textColor="@color/orange"
+        android:textSize="35sp" />
+
+    <Spinner
+        android:id="@+id/EscolhaEquipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="110dp"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="160dp"
+        android:text="Data:"
+        android:textColor="@color/orange"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/ShowDataMarcacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="170dp"
+        android:text="Data Aparece Aqui"
+        android:textColor="#03A9F4"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="280dp"
+        android:text="Hora"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="35sp" />
+
+
+    <Button
+        android:id="@+id/EscolherHoraMarcacao"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#03A9F4"
+        android:onClick="EscolherHora"
+        android:text="Escolher Hora"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/EscolherConvocacao"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="550dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#03A9F4"
+        android:text="Convocação"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="700dp"
+        android:background="@null"
+        android:onClick="saveEventAction"
+        android:text="Guardar"
+        android:textColor="#03A9F4"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -9,12 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import static com.example.uiteste.calendario.CalendarUtils.daysInMonthArray;
 import static com.example.uiteste.calendario.CalendarUtils.daysInWeekArray;
 import static com.example.uiteste.calendario.CalendarUtils.monthYearFromDate;
 
@@ -90,6 +88,6 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
 
     public void newEventAction(View view)
     {
-        startActivity(new Intent(this, EventEditActivity.class));
+        startActivity(new Intent(this, EditarEvento.class));
     }
 }
