@@ -46,8 +46,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="170dp"
+        android:text="Pavilhão"
+        android:textColor="@color/orange"
+        android:textSize="35sp" />
+
+    <Spinner
+        android:id="@+id/EscolherPavilhao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="180dp"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="270dp"
         android:text="Data:"
         android:textColor="@color/orange"
         android:textSize="35sp" />
@@ -57,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="270dp"
         android:text="Data Aparece Aqui"
         android:textColor="#03A9F4"
         android:textSize="25sp" />
@@ -66,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="390dp"
         android:text="Hora"
         android:textAlignment="center"
         android:textColor="@color/orange"
@@ -78,7 +96,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="390dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#03A9F4"
         android:onClick="EscolherHora"
@@ -92,26 +110,52 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="150dp"
         android:layout_marginTop="550dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#03A9F4"
+        android:onClick="AbrirConvocatoria"
         android:text="Convocação"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
         android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="640dp"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/JogoToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Jogo"
+            android:textOn="Jogo"
+            android:onClick="EscolherTipoJogo"/>
+
+        <ToggleButton
+            android:id="@+id/TreinoToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Treino"
+            android:textOn="Treino"
+            android:onClick="EscolherTipoTreino"/>
+
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="700dp"
+        android:layout_marginTop="750dp"
         android:background="@null"
-        android:onClick="saveEventAction"
+        android:onClick="SalvarEvento"
         android:text="Guardar"
         android:textColor="#03A9F4"
         android:textSize="20sp"
         android:textStyle="bold" />
+
 
 </RelativeLayout>

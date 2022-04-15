@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calendario.ConvocatoriaTreinador">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Convocados"
+        android:textColor="#FFEB3B"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/Adicionar"
+            android:onClick="AdicionarJogadorLista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adicionar"
+            android:textColor="@color/orange"
+            android:textSize="20sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/NomeJogadorProcuradoConvocatoria"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Nome do jogador" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ListaConvocatoria"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/Remover"
+            android:onClick="RegistarConvocados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:layout_gravity="center"
+            android:textColor="@color/orange"
+            android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+

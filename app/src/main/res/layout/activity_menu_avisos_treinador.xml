@@ -9,84 +9,41 @@
         android:id="@+id/btnEliminarAvisos"
         android:layout_width="110dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/roundstyle"
         android:text="Eliminar"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintHorizontal_bias="0.992"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnEditarAvisos"
         android:layout_width="110dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/roundstyle"
         android:text="Editar"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEliminarAvisos"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toEndOf="@+id/BtnInserirAvisos" />
-
-    <TextView
-        android:id="@+id/textViewAltJogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="260dp"
-        android:text="Alterações no Jogo"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextMultiLine4"
-        android:layout_width="345dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="420dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewAltTreino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
-        android:text="Alterações no Treino"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextMultiLine3"
-        android:layout_width="345dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="100dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/BtnInserirAvisos"
         android:layout_width="110dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/roundstyle"
         android:text="Adicionar"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -94,7 +51,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="AVISOS"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -105,11 +64,23 @@
         android:id="@+id/btnVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/roundstyle"
         android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/ListViewAvisos"
+        android:layout_width="360dp"
+        android:layout_height="425dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAVISOS" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

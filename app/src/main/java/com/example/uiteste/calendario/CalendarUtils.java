@@ -1,19 +1,25 @@
 package com.example.uiteste.calendario;
 
+import com.google.android.gms.common.util.Strings;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class CalendarUtils
 {
     public static LocalDate selectedDate;
+    public static ArrayList<String> idsConvocados = new ArrayList<>();
 
     public static String formattedDate(LocalDate date)
     {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
         return date.format(formatter);
     }
 

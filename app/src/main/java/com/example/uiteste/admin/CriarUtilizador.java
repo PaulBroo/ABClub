@@ -1,14 +1,19 @@
-package com.example.uiteste;
+package com.example.uiteste.admin;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -16,12 +21,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.uiteste.Data.User;
+import com.example.uiteste.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.Calendar;
 
@@ -34,6 +45,7 @@ public class CriarUtilizador extends AppCompatActivity implements DatePickerDial
     private FirebaseAuth fAuth;
     private int anoNasc, mesNasc, diaNasc;
     private String escalao, role, equipa;
+    private Uri imagemPerfil;
 
     FirebaseDatabase rootNode;
     DatabaseReference UsersReference, TeamReference;
@@ -158,7 +170,7 @@ public class CriarUtilizador extends AppCompatActivity implements DatePickerDial
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
                     UsersReference.child(task.getResult().getUser().getUid()).setValue(helperclass);
-
+                    uploadImageFirebase(task.getResult().getUser().getUid().toString(), imagemPerfil);
                     if (role.equals("jogador")) {
                         TeamReference.child(task.getResult().getUser().getUid()).setValue(helperclass);
                     }
@@ -167,6 +179,41 @@ public class CriarUtilizador extends AppCompatActivity implements DatePickerDial
                 else {
                     Toast.makeText(CriarUtilizador.this, "Error ! " + task.getException(), Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+    }
+
+    public void EscolherImagem(View view) {
+        Intent AbrirGaleria = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(AbrirGaleria, 1001);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1001) {
+            if (resultCode == Activity.RESULT_OK) {
+                imagemPerfil = data.getData();
+            }
+        }
+    }
+
+    private void uploadImageFirebase(String nome, Uri contentUri) {
+        StorageReference imagem = FirebaseStorage.getInstance().getReference().child("profileImages/" + nome);
+        imagem.putFile(contentUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                imagem.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Log.d("TAG", "URL: " + uri.toString());
+                    }
+                });
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(CriarUtilizador.this, "Ocorreu um erro durante o upload da imagem!", Toast.LENGTH_SHORT).show();
             }
         });
     }

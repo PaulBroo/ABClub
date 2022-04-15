@@ -1,16 +1,18 @@
-package com.example.uiteste;
+package com.example.uiteste.InterfacesPrincipais;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.uiteste.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -27,24 +29,33 @@ public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     private String role;
+    private ProgressBar progressBar;
+    private ViewGroup view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
-
         mDatabase = FirebaseDatabase.getInstance("https://abclub-30a87-default-rtdb.europe-west1.firebasedatabase.app").getReference("Users");
+        iniWidgets();
 
+    }
+
+    private void iniWidgets() {
         Logar = (Button) findViewById(R.id.BtnLogin);
         Logar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {login();}
         });
+
+        progressBar = (ProgressBar) findViewById(R.id.ProgressBarLogin);
+        view = (ViewGroup) progressBar.getParent();
     }
 
     protected void onStart() {
         super.onStart();
         if(FirebaseAuth.getInstance().getCurrentUser() != null) {
+            progressBar.setVisibility(view.VISIBLE);
             VerificarRole();
         }
     }
@@ -102,6 +113,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
               VerificarRole();
+              progressBar.setVisibility(view.VISIBLE);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

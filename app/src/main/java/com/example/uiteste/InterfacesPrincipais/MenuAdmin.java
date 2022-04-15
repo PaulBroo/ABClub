@@ -1,4 +1,4 @@
-package com.example.uiteste;
+package com.example.uiteste.InterfacesPrincipais;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.uiteste.R;
+import com.example.uiteste.admin.CriarUtilizador;
+import com.example.uiteste.admin.ListaDeJogadoresAdmin;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MenuAdmin extends AppCompatActivity {
@@ -19,14 +22,6 @@ public class MenuAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_admin);
 
-        AbrirCriar = (Button) findViewById(R.id.BtnRegistar);
-        AbrirCriar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Criar();
-            }
-        });
-
         Logout = (Button)  findViewById(R.id.BtnLogoutAdmin);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +33,12 @@ public class MenuAdmin extends AppCompatActivity {
         });
     }
 
-    private void Criar() {
+    public void AbrirListaDeJogadores(View view) {
+        Intent intent = new Intent(this, ListaDeJogadoresAdmin.class);
+        startActivity(intent);
+    }
+
+    public void AbrirCriarUtilizador(View view) {
         Intent intent = new Intent(this, CriarUtilizador.class);
         startActivity(intent);
     }

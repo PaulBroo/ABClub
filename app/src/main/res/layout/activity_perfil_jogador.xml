@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfilJogador">
+    tools:context=".InterfacesPrincipais.PerfilJogador">
 
     <LinearLayout
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="800dp"
         android:layout_marginTop="65dp"
         android:orientation="vertical"
@@ -16,12 +16,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/marcinhos" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ImagemPerfil"
+            android:layout_width="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp" />
 
         <Space
             android:layout_width="match_parent"

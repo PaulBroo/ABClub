@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CriarUtilizador">
+    tools:context=".admin.CriarUtilizador">
 
     <EditText
         android:id="@+id/PrimeiroNome"
@@ -170,6 +170,15 @@
         android:layout_marginTop="45dp"
         app:layout_constraintStart_toStartOf="@+id/EscaloesLista"
         app:layout_constraintTop_toBottomOf="@+id/EscaloesLista" />
+
+    <Button
+        android:id="@+id/EscolherImagem"
+        android:onClick="EscolherImagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolher Imagem"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="780dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

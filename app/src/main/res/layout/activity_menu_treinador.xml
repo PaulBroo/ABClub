@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuTreinador">
+    tools:context=".InterfacesPrincipais.MenuTreinador">
 
 
     <Button
         android:id="@+id/btnLogoutTreinador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Logout"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#226DA8"
         android:text="Logout"
@@ -28,6 +29,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <Button
+            android:onClick="AbrirAvisos"
             android:id="@+id/btnAvisos"
             android:layout_width="270dp"
             android:layout_height="57dp"
@@ -41,6 +43,7 @@
             android:layout_height="30dp" />
 
         <Button
+            android:onClick="AbrirRegistoFaltas"
             android:id="@+id/btnFaltas"
             android:layout_width="270dp"
             android:layout_height="57dp"
@@ -61,7 +64,7 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/roundstyle"
             android:textColor="@color/black"
-            android:text="Marcação de treinos"/>
+            android:text="Marcação de treinos e Jogos"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

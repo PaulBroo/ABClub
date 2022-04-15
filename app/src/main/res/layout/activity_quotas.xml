@@ -4,201 +4,361 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Quotas">
+    tools:context=".pagamentos.Quotas">
 
     <TextView
         android:id="@+id/TextView7"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="103dp"
         android:text="Neste Ano:"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="33dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="49dp"
         android:text="Mês de janeiro:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="137dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toStartOf="@+id/fev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView7" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="49dp"
         android:text="Mês de fevereiro:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="187dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/fev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView7" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="49dp"
         android:text="Mês de março:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="236dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/abril"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="1dp"
         android:text="Mês de abril:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="286dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toStartOf="@+id/abril"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="45dp"
         android:text="Mês de maio:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="336dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toStartOf="@+id/maio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="49dp"
         android:text="Mês de junho:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="386dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toStartOf="@+id/jun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="49dp"
         android:text="Mês de julho:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="436dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        app:layout_constraintEnd_toStartOf="@+id/ago"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="45dp"
         android:text="Mês de agosto:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="486dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintEnd_toStartOf="@+id/ago"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="49dp"
         android:text="Mês de setembro:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="535dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toStartOf="@+id/set"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="99dp"
         android:text="Mês de outubro:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="585dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+        app:layout_constraintEnd_toStartOf="@+id/nov"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="45dp"
         android:text="Mês de novembro:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="635dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        app:layout_constraintEnd_toStartOf="@+id/nov"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="132dp"
         android:text="Mês de dezembro:"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="684dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dez"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="22dp"
         android:text="Pagamento efetuado?"
-        tools:layout_editor_absoluteX="229dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/jan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="137dp" />
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="@+id/fev"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"/>
+
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/fev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="187dp" />
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="135dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+
+        android:textColorHighlight="#248d51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/jan" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/mar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="236dp" />
+        android:layout_marginTop="18dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintStart_toStartOf="@+id/abril"
+        app:layout_constraintTop_toBottomOf="@+id/fev" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/abril"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="286dp" />
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="135dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/mar" />
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/maio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="336dp" />
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="135dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/abril" />
 
     <CheckBox
-        android:id="@+id/checkBox7"
+        android:id="@+id/jun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="386dp" />
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="135dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/maio" />
 
     <CheckBox
-        android:id="@+id/checkBox8"
+        android:id="@+id/jul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="436dp" />
+        android:layout_marginTop="18dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintStart_toStartOf="@+id/ago"
+        app:layout_constraintTop_toBottomOf="@+id/jun" />
 
     <CheckBox
-        android:id="@+id/checkBox9"
+        android:id="@+id/ago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="486dp" />
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="135dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/jul" />
 
     <CheckBox
-        android:id="@+id/checkBox10"
+        android:id="@+id/set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="535dp" />
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="135dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/ago" />
 
     <CheckBox
-        android:id="@+id/checkBox11"
+        android:id="@+id/out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="585dp" />
+        android:layout_marginTop="18dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintStart_toStartOf="@+id/nov"
+        app:layout_constraintTop_toBottomOf="@+id/set" />
 
     <CheckBox
-        android:id="@+id/checkBox12"
+        android:id="@+id/nov"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="635dp" />
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="135dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/out" />
 
     <CheckBox
-        android:id="@+id/checkBox13"
+        android:id="@+id/dez"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="684dp" />
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="135dp"
+        android:buttonTint="#d1202d"
+        android:checked="false"
+        android:clickable="false"
+        android:textColor="#d1d2d4"
+        android:textColorHighlight="#248d51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/nov" />
 </androidx.constraintlayout.widget.ConstraintLayout>

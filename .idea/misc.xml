@@ -6,6 +6,7 @@
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.203" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/drawable/ic_launcher_background.xml" value="0.203" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/drawable/roundstyle.xml" value="0.203" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.1" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout-w936dp/activity_event_edit.xml" value="0.1" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout-w936dp/activity_faltas.xml" value="0.1" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout-w936dp/activity_quotas.xml" value="0.1" />
@@ -14,26 +15,39 @@
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout-w936dp/event_cell.xml" value="0.1" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_adicionar_avisos.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_calendario_pavilhoes.xml" value="0.2436923148431724" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_convocatoria_sem_checkbox.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_convocatoria_treinador.xml" value="0.2436923148431724" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_criar_utilizador.xml" value="0.2436923148431724" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_editar_avisos.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_editar_evento.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_eliminar_avisos.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_event_edit.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_faltas.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_lista_de_jogadores_admin.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_login.xml" value="0.2436923148431724" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_main.xml" value="0.2436923148431724" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_menu_admin.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_menu_avisos_encarregado_atleta.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_menu_avisos_treinador.xml" value="0.36923078006541266" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_menu_jogador.xml" value="0.18041898247114152" />
-        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_menu_pagamentos.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_menu_pagamentos.xml" value="0.25" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_menu_treinador.xml" value="0.2436923148431724" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_perfil_jogador.xml" value="0.2436923148431724" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_perfil_jogador_admin.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_quotas.xml" value="0.18041898247114152" />
-        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_treinos_treinador.xml" value="0.1" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_treinos_treinador.xml" value="0.15507692762747333" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/activity_week_view.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/aviso_single_item.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/calendar_cell.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/calendario_mensal.xml" value="0.16409791477787852" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/content_scrolling.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/event_cell.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/single_item.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/single_item_convocatoria.xml" value="0.1" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/single_item_eventos.xml" value="0.16409791477787852" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/layout/single_item_lista_jogadores_admin.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/menu/menu_convocatoria_treinador.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/Paulo/Desktop/ABClub/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.204" />
         <entry key="..\:/Users/Paulo/Desktop/UITeste/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/Paulo/Desktop/UITeste/app/src/main/res/layout-w1240dp/activity_login2.xml" value="0.1" />
         <entry key="..\:/Users/Paulo/Desktop/UITeste/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1" />

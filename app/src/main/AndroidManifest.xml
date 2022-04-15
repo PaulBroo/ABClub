@@ -10,6 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".admin.PerfilJogadorAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".admin.ListaDeJogadoresAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".calendario.ConvocatoriaSemCheckbox"
+            android:exported="false" />
+        <activity
+            android:name=".calendario.ConvocatoriaTreinador"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".avisos.MenuAvisosTreinador"
             android:exported="false" />
         <activity
@@ -22,7 +35,7 @@
             android:name=".avisos.EditarAvisos"
             android:exported="false" />
         <activity
-            android:name=".TreinosTreinador"
+            android:name=".calendario.CalendarioMensal"
             android:exported="false" />
         <activity
             android:name=".Faltas"
@@ -34,28 +47,28 @@
             android:name=".calendario.EditarEvento"
             android:exported="false" />
         <activity
-            android:name=".MenuTreinador"
+            android:name=".InterfacesPrincipais.MenuTreinador"
             android:exported="false" />
         <activity
-            android:name=".MenuPagamentos"
+            android:name=".pagamentos.MenuPagamentos"
             android:exported="false" />
         <activity
-            android:name=".CriarUtilizador"
+            android:name=".admin.CriarUtilizador"
             android:exported="false" />
         <activity
-            android:name=".MenuJogador"
+            android:name=".InterfacesPrincipais.MenuJogador"
             android:exported="false" />
         <activity
-            android:name=".CalendarioPavilhoes"
+            android:name=".pagamentos.Quotas"
             android:exported="false" />
         <activity
-            android:name=".MenuAdmin"
+            android:name=".InterfacesPrincipais.MenuAdmin"
             android:exported="false" />
         <activity
-            android:name=".PerfilJogador"
+            android:name=".InterfacesPrincipais.PerfilJogador"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".InterfacesPrincipais.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

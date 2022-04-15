@@ -5,63 +5,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="395dp"
-        android:layout_height="40dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="196dp" />
+    <TextView
+        android:id="@+id/textViewDescricao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="78dp"
+        android:text="Nova Descrição do Aviso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo2" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="139dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="Avisos para Treino"
-        android:textSize="14sp"
+        android:id="@+id/textViewTitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:text="Novo Título do Aviso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditar" />
+
+    <TextView
+        android:id="@+id/textViewAVISOS4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Editar Avisos"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView10"
+    <Button
+        android:id="@+id/btnVoltar4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="424dp"
-        android:text="Avisos para Jogo"
+        android:layout_marginTop="232dp"
+        android:background="@drawable/roundstyle"
+        android:text="Voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditar" />
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="91dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/roundstyle"
+        android:text="Editar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListaAvisosEditar" />
+
+    <EditText
+        android:id="@+id/editTextNovoTitulo"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="212dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Novo Título"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNovaDescricao"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="112dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nova Descrição"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="395dp"
-        android:layout_height="40dp"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="59dp" />
-
-    <Button
-        android:id="@+id/btn_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Editar"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ListaAvisosEditar"
+        android:layout_width="360dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        app:layout_constraintVertical_bias="0.011" />
-
-    <Button
-        android:id="@+id/btn_edit2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Editar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3"
-        app:layout_constraintVertical_bias="0.013" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAVISOS4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

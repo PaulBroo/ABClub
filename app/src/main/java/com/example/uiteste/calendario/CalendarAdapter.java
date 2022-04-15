@@ -3,9 +3,13 @@ package com.example.uiteste.calendario;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,11 +23,16 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder>
 {
     private final ArrayList<LocalDate> days;
     private final OnItemListener onItemListener;
+    private ArrayList<String> DiasComTreinos;
+    private ArrayList<String> DiasComJogos;
 
-    public CalendarAdapter(ArrayList<LocalDate> days, OnItemListener onItemListener)
+    public CalendarAdapter(ArrayList<LocalDate> days, OnItemListener onItemListener,
+                           ArrayList<String> DiasComTreinos, ArrayList<String> DiasComJogos)
     {
         this.days = days;
         this.onItemListener = onItemListener;
+        this.DiasComTreinos = DiasComTreinos;
+        this.DiasComJogos = DiasComJogos;
     }
 
     @NonNull
@@ -53,7 +62,36 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder>
             holder.dayOfMonth.setText(String.valueOf(date.getDayOfMonth()));
             if(date.equals(CalendarUtils.selectedDate))
                 holder.parentView.setBackgroundColor(Color.LTGRAY);
+
+            if (DiaTemJogo(date) && DiaTemTreino(date))
+                holder.dayOfMonth.setTextColor(Color.RED);
+
+            else if(DiaTemJogo(date))
+                holder.dayOfMonth.setTextColor(Color.CYAN);
+
+            else if(DiaTemTreino(date))
+                holder.dayOfMonth.setTextColor(Color.GREEN);
         }
+    }
+
+    public boolean DiaTemJogo(LocalDate date) {
+        String data = CalendarUtils.formattedDate(date);
+
+        for (String dia: DiasComJogos) {
+            if (dia.equals(data))
+                return true;
+        }
+        return false;
+    }
+
+    public boolean DiaTemTreino(LocalDate date) {
+        String data = CalendarUtils.formattedDate(date);
+
+        for (String dia: DiasComTreinos) {
+            if (dia.equals(data))
+                return true;
+        }
+        return false;
     }
 
     @Override
